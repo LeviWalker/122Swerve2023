@@ -3,7 +3,6 @@ package frc.robot.drive.commands;
 import frc.robot.MathUtil;
 import edu.wpi.first.math.kinematics.ChassisSpeeds;
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.Constants;
 import frc.robot.drive.SwerveDrive;
@@ -25,7 +24,7 @@ public class DriveCommand extends CommandBase {
 
         double limit = 0.20;
         double xSpeed = -MathUtil.calculateAxis(driver.getY(), Constants.kDefaultAxisDeadband, limit * Constants.kMaxTranslationalVelocity);
-        double ySpeed = MathUtil.calculateAxis(driver.getX(), Constants.kDefaultAxisDeadband, limit * Constants.kMaxTranslationalVelocity);
+        double ySpeed = -MathUtil.calculateAxis(driver.getX(), Constants.kDefaultAxisDeadband, limit * Constants.kMaxTranslationalVelocity);
         double thetaSpeed = MathUtil.calculateAxis(driver.getZ(), Constants.kDefaultAxisDeadband, limit * Constants.kMaxRotationalVelocity);
 
         // SmartDashboard.putNumber("z", driver.getZ()); 

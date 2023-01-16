@@ -154,19 +154,21 @@ public class Constants {
         public static final int kDrivePeakCurrentLimit = 60;
         public static final double kDrivePeakCurrentDuration = 0.1;
 
-        public static final double kDriveS = 0.519;
-        public static final double kDriveV = 2.306;
-        public static final double kDriveA = 0.0;
+        public static final double kDriveS = 0.667 / 12.0;
+        public static final double kDriveV = 2.44 / 12.0;
+        public static final double kDriveA = 0.27 / 12.0;
 
-        public static final double kDriveP = 1.5;
+        public static final double kDriveP = 0.10;
         public static final double kDriveI = 0.0;
         public static final double kDriveD = 0.0;
-        public static final double kDriveF = 0; // 0.25 / 0.54 * 0.1;
+        public static final double kDriveF = 0;
 
         public static final double kTurnP = 0.6;
         public static final double kTurnI = 0;
         public static final double kTurnD = 12.0;
         public static final double kTurnF = 0.0;
+
+        public static final Rotation2d kAllowableAngleTolerance = Rotation2d.fromDegrees(1);
     }
 
     public static void main(String[] args) {
