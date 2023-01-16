@@ -123,6 +123,10 @@ public class SwerveDrive extends SubsystemBase {
         this.odometry.update(this.getHeading(), this.getModulePositions());
     }
 
+    public SwerveDriveOdometry getOdometry() {
+        return this.odometry;
+    }
+
     @Override
     public void periodic() {
         this.updateOdometry();
